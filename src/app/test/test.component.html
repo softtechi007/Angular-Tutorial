@@ -5,3 +5,6 @@
 <h2>{{name.toUpperCase()}}</h2>
 <h2>{{greetUser()}}</h2>
 <h2>{{siteUrl}}</h2>
+<input type="text" [id]="myId" value="Mohammed Iqbal">
+<input [disabled]="isdisabled" type="text" id="{{myId}}" value="Mohammed Iqbal">
+<input bind-disabled="isdisabled" type="text" [id]="myId" value="Mohammed Iqbal">

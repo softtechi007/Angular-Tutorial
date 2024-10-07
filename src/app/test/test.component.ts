@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 export class TestComponent {
   public name = "Iqbal";
   public siteUrl: string | undefined;
+  public myId = "testId";
+  public isdisabled = true;
 
   constructor(){
     if (typeof window !== 'undefined') {
