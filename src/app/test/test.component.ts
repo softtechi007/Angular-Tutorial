@@ -32,7 +32,7 @@ export class TestComponent {
   public onClick(event: any){
     console.log("Welcom to code evoultion");
     console.log(event);
-    this.greeting = "Welcom to code evoultion";
+    this.greeting = "Welcome to code evoultion";
   }
 
   constructor(){
