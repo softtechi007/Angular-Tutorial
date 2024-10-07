@@ -20,3 +20,6 @@
 <button (click)="onClick($event)">Greet</button>
 <button (click)="greeting = 'Welcome Iqbal'">Greet</button>
 {{greeting}}
+<input #myInput type="text"/>
+<button (click)="logMessage(myInput.value)">Log</button>
+<button (click)="logMessage(myInput)">Log</button>

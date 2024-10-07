@@ -35,6 +35,9 @@ export class TestComponent {
     this.greeting = "Welcome to code evoultion";
   }
 
+  public logMessage(value:any){
+    console.log(value);
+  }
   constructor(){
     if (typeof window !== 'undefined') {
       this.siteUrl = window.location.href;
