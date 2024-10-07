@@ -13,3 +13,7 @@
 <h2 class="text-special" [class] = "successClass" >CodeEvolution</h2>
 <h2 [class.text-danger] = "hasError">CodeEvolution</h2>
 <h2 [ngClass] ="messageClass">CodeEvolution</h2>
+<h2 [style.color] ="'Orange'">Style binding</h2>
+<h2 [style.color] ="hasError ? 'blue':'Orange'">Style binding</h2>
+<h2 [style.color] ="highlightColor">Style binding</h2>
+<h2 [ngStyle]="titleStyles">Style binding</h2>

@@ -1,10 +1,10 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-test',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass,NgStyle],
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
@@ -20,6 +20,11 @@ export class TestComponent {
     "test-success": !this.hasError,
     "text-danger": this.hasError,
     "text-special": this.isSpecial
+  };
+  public highlightColor = "Grey";
+  public titleStyles = {
+    color:"blue",
+    fontStyle:"italic"
   }
 
   constructor(){
