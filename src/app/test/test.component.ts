@@ -1,9 +1,10 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-test',
   standalone: true,
-  imports: [],
+  imports: [NgClass],
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
@@ -12,6 +13,14 @@ export class TestComponent {
   public siteUrl: string | undefined;
   public myId = "testId";
   public isdisabled = true;
+  public successClass = "test-success";
+  public hasError = true;
+  public isSpecial = true;
+  public messageClass = {
+    "test-success": !this.hasError,
+    "text-danger": this.hasError,
+    "text-special": this.isSpecial
+  }
 
   constructor(){
     if (typeof window !== 'undefined') {

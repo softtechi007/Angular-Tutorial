@@ -8,3 +8,8 @@
 <input type="text" [id]="myId" value="Mohammed Iqbal">
 <input [disabled]="isdisabled" type="text" id="{{myId}}" value="Mohammed Iqbal">
 <input bind-disabled="isdisabled" type="text" [id]="myId" value="Mohammed Iqbal">
+<h2 class="test-success">CodeEvolution</h2>
+<h2 [class] = "successClass">CodeEvolution</h2>
+<h2 class="text-special" [class] = "successClass" >CodeEvolution</h2>
+<h2 [class.text-danger] = "hasError">CodeEvolution</h2>
+<h2 [ngClass] ="messageClass">CodeEvolution</h2>
