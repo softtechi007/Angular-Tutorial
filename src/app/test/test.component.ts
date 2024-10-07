@@ -16,15 +16,23 @@ export class TestComponent {
   public successClass = "test-success";
   public hasError = true;
   public isSpecial = true;
+  public highlightColor = "Grey";
+  public greeting = "";
+  
   public messageClass = {
     "test-success": !this.hasError,
     "text-danger": this.hasError,
     "text-special": this.isSpecial
   };
-  public highlightColor = "Grey";
+  
   public titleStyles = {
     color:"blue",
     fontStyle:"italic"
+  }
+  public onClick(event: any){
+    console.log("Welcom to code evoultion");
+    console.log(event);
+    this.greeting = "Welcom to code evoultion";
   }
 
   constructor(){
