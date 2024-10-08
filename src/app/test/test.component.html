@@ -51,3 +51,19 @@
     <div *ngSwitchCase="'green'">You picked green color</div>
     <div *ngSwitchDefault>Pick again</div>
 </div>
+
+<div *ngFor="let color of colorList; index as i">
+    <h2>{{i}}  {{color}}</h2>
+</div>
+
+<div *ngFor="let color of colorList; first as f">
+    <h2>{{f}}  {{color}}</h2>
+</div>
+
+<div *ngFor="let color of colorList; last as l">
+    <h2>{{l}}  {{color}}</h2>
+</div>
+
+<div *ngFor="let color of colorList; odd as o">
+    <h2>{{o}}  {{color}}</h2>
+</div>

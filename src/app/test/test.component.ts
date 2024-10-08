@@ -1,11 +1,11 @@
-import { NgClass, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { NgClass, NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-test',
   standalone: true,
-  imports: [NgClass,NgStyle,FormsModule,NgIf,NgSwitch,NgSwitchCase,NgSwitchDefault],
+  imports: [NgClass,NgStyle,FormsModule,NgIf,NgSwitch,NgSwitchCase,NgSwitchDefault,NgFor],
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
@@ -23,6 +23,7 @@ export class TestComponent {
   public displayName = true;
   public displayNameSecond = false;
   public switchColor = 'Orange';
+  public colorList = ['Red','Blue','Green','Yellow'];
 
   public messageClass = {
     "test-success": !this.hasError,
