@@ -25,3 +25,23 @@
 <button (click)="logMessage(myInput)">Log</button>
 <input [(ngModel)]="userName" type="text"/>
 {{userName}}
+<h2 *ngIf="displayName ; else elseBlock">
+    ngIf structural directive
+</h2>
+
+<ng-template #elseBlock>
+    <h2>
+        Name is hidden
+    </h2>
+</ng-template>
+
+<div *ngIf="displayNameSecond ; then thenBlock ; else elseBlockSecond"></div>
+
+<ng-template #thenBlock>
+    <h2>ngIf is {{displayNameSecond}}</h2>
+</ng-template>
+
+<ng-template #elseBlockSecond>
+    <h2>ngIf is {{displayNameSecond}}</h2>
+</ng-template>
+

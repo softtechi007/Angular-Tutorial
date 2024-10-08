@@ -1,11 +1,11 @@
-import { NgClass, NgStyle } from '@angular/common';
+import { NgClass, NgIf, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-test',
   standalone: true,
-  imports: [NgClass,NgStyle,FormsModule],
+  imports: [NgClass,NgStyle,FormsModule,NgIf],
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
@@ -20,6 +20,9 @@ export class TestComponent {
   public highlightColor = "Grey";
   public greeting = "";
   public userName = ""; 
+  public displayName = true;
+  public displayNameSecond = false;
+
   public messageClass = {
     "test-success": !this.hasError,
     "text-danger": this.hasError,
