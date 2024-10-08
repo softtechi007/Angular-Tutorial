@@ -67,3 +67,7 @@
 <div *ngFor="let color of colorList; odd as o">
     <h2>{{o}}  {{color}}</h2>
 </div>
+
+<h2>{{"Hello " + parentData}}</h2>
+
+<button (click)="fireEvent()">Send Event</button>

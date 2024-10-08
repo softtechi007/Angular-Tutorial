@@ -11,4 +11,6 @@ import { TestComponent } from './test/test.component';
 })
 export class AppComponent {
   title = 'binding';
+  public name = "Mohammed Iqbal";
+  public message = "";
 }

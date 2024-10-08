@@ -1,6 +1,8 @@
 import { NgClass, NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+// import { EventEmitter } from 'stream';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -24,6 +26,9 @@ export class TestComponent {
   public displayNameSecond = false;
   public switchColor = 'Orange';
   public colorList = ['Red','Blue','Green','Yellow'];
+  @Input() public parentData: string | any;
+  @Output() public childEvent = new EventEmitter();
+
 
   public messageClass = {
     "test-success": !this.hasError,
@@ -54,5 +59,10 @@ export class TestComponent {
 
   greetUser(){
     return "Hello " + this.name;
+  }
+
+  fireEvent(){
+    this.childEvent.emit('Hey Codevolution');
+    console.log("button has clicked");
   }
 }
