@@ -1,13 +1,14 @@
-import { NgClass, NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { CurrencyPipe, DatePipe, DecimalPipe, JsonPipe, LowerCasePipe, NgClass, NgFor, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, PercentPipe, SlicePipe, UpperCasePipe } from '@angular/common';
 import { Component,Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 // import { EventEmitter } from 'stream';
 import { EventEmitter } from '@angular/core';
 
+
 @Component({
   selector: 'app-test',
   standalone: true,
-  imports: [NgClass,NgStyle,FormsModule,NgIf,NgSwitch,NgSwitchCase,NgSwitchDefault,NgFor],
+  imports: [NgClass,NgStyle,FormsModule,NgIf,NgSwitch,NgSwitchCase,NgSwitchDefault,NgFor,UpperCasePipe,LowerCasePipe,SlicePipe,JsonPipe,DecimalPipe,PercentPipe,CurrencyPipe,DatePipe],
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
@@ -26,6 +27,8 @@ export class TestComponent {
   public displayNameSecond = false;
   public switchColor = 'Orange';
   public colorList = ['Red','Blue','Green','Yellow'];
+  public pipeName = "Welcome to code evolution";
+  public date = new Date();
   @Input() public parentData: string | any;
   @Output() public childEvent = new EventEmitter();
 
