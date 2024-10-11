@@ -21,6 +21,7 @@ export class EmployeeDetailsComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.employees = this._employeeService.getEmployess();
+    this._employeeService.getEmployess()
+      .subscribe(data => this.employees = data);
   }
 }

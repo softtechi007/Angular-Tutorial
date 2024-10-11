@@ -4,6 +4,7 @@ import { EmoloyeeListComponent } from './emoloyee-list/emoloyee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
